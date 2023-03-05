@@ -70,6 +70,25 @@ def convert_list_to_dict(input_list):
     # Возвращаем словарь
     return result_dict
 
+    # 2-й вариант решения
+
+    # names_list = []
+    # prices_list = []
+    # counts_list = []
+    # units_list = []
+
+    # res_dict = {}
+
+    # for i in range(len(input_list)):
+    #   names_list.append(input_list[i][i]['название'])
+    #   prices_list.append(input_list[i][i]['цена'])
+    #   counts_list.append(input_list[i][i]['количество'])
+    #   units_list.append(input_list[i][i]['ед'])
+
+    # res_dict.update({'название': names_list, 'цена': prices_list,
+    # 'количество': counts_list, 'ед': units_list }))
+    # print(res_dict)
+
 
 # Вводим количество товаров
 try:
@@ -83,7 +102,7 @@ else:
     print("\nПолученный список-словарь:")
     for keys, values in goods_list:
         print("({}, {})".format(keys, values))
-    # Запоняем словарь с помощью функции convert_list_to_dict
+    # Заполняем словарь с помощью функции convert_list_to_dict
     analytics_dict = convert_list_to_dict(goods_list)
     # Печать полученного словаря
     print("\nПолученный словарь-аналитика:")
